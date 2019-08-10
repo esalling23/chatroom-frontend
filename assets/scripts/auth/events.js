@@ -51,6 +51,12 @@ const addHandlers = () => {
   $('#noauth').on('submit', '#sign-in', onSignIn)
   $('#auth').on('submit', '#sign-out', onSignOut)
   $('#auth').on('submit', '#change-password', onChangePassword)
+  $('#sign-up').on('hidden.bs.collapse', function () {
+    $('.toggle-sign-up').html('Create Account <i class="fas fa-user-plus"></i>')
+  })
+  $('#sign-in').on('hidden.bs.collapse', function () {
+    $('.toggle-sign-up').html('Sign In <i class="fas fa-sign-in-alt"></i>')
+  })
 }
 
 const initialize = () => {

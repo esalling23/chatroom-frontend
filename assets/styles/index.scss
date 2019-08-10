@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/css/all.min';
 
 .failure {
   color: red;
@@ -12,13 +13,18 @@
 
 .message-board {
   border: 2px solid black;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 70%;
   margin: 0 auto;
+  max-height: 500px;
+  overflow: auto;
   padding: 10px;
   position: relative;
   width: 60%;
-  height: 70%;
-  max-height: 500px;
-  overflow: auto;
-  display: flex;
-  flex-direction: column-reverse;
+}
+
+#send-message {
+  margin: 1.5em auto;
+  width: 60%;
 }

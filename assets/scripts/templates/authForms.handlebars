@@ -1,5 +1,5 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#authFormsModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#authFormsModal"><i class="fas fa-address-card"></i>
   User Options
 </button>
 
@@ -42,7 +42,9 @@
 
 <ul class="message-board list-group"></ul>
 
-<form id="send-message">
-  <input type="text" name="message[text]">
-  <input type="submit" class="btn btn-secondary" value="Submit">
+<form id="send-message" class="border p-4">
+  <div class="form-group">
+    <input type="text" name="message[text]" placeholder="start typing...">
+    <input type="submit" class="btn btn-secondary" value="Submit">
+  </div>
 </form>

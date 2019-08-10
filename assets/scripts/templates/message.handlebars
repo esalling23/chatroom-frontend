@@ -1,1 +1,7 @@
-<li class="list-group-item">{{owner.email}}: {{text}}</li>
+<li class="list-group-item">
+  {{owner.email}}: {{text}}
+  {{#if editable}}
+    <p class="badge badge-secondary">Edit</p>
+    <p class="badge badge-danger">Delete</p>
+  {{/if}}
+</li>

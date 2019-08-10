@@ -1,6 +1,7 @@
 'use strict'
 
 const store = require('../store')
+const messageEvents = require('../messages/events')
 const commonUi = require('../common-ui')
 
 const setup = function () {
@@ -24,13 +25,14 @@ const signUpFailure = function (error) {
 }
 
 const signInSuccess = function (data) {
+  store.user = data.user
   $('#alert').text('Signed in successfully')
   $('#alert').removeClass()
   $('#alert').addClass('success')
   commonUi.formClear()
   commonUi.showAuth() // show signout/changepw/messaging
+  messageEvents.initialize()
   // console.log('signInSuccess ran. Data is :', data)
-  store.user = data.user
 }
 
 const signInFailure = function (error) {
@@ -45,6 +47,7 @@ const signOutSuccess = function () {
   $('#alert').text('Signed out successfully')
   $('#alert').removeClass()
   $('#alert').addClass('success')
+  commonUi.modalClear()
   commonUi.formClear() // clear forms
   commonUi.hideAuth() // hide signout/changepw/messaging
   // console.log('signOutSuccess ran and nothing was returned!')
@@ -64,6 +67,7 @@ const changePasswordSuccess = function () {
   $('#alert').removeClass()
   $('#alert').addClass('success')
   commonUi.formClear()
+  $('#authFormsModal').modal('hide')
   // console.log('changePasswordSuccess ran and nothing was returned!')
 }
 

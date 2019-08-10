@@ -6,6 +6,11 @@ const formClear = () => {
   $('form').trigger('reset') // IMPORTANT
 }
 
+const modalClear = () => {
+  $('body').removeClass('modal-open')
+  $('.modal-backdrop').fadeOut().remove()
+}
+
 const showAuth = () => {
   $('#auth').html(authTemplates({}))
   $('#noauth').html('')
@@ -18,6 +23,7 @@ const hideAuth = () => {
 
 module.exports = {
   formClear,
+  modalClear,
   hideAuth,
   showAuth
 }

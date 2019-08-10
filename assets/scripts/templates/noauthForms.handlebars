@@ -1,18 +1,30 @@
-<form id="sign-up" class="border">
-  <fieldset>
-    <legend>Sign up!</legend>
-    <input type="text" name="credentials[email]" placeholder="Email">
-    <input type="password" name="credentials[password]" placeholder="Password">
-    <input type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
-    <input type="submit" value="Sign up!">
-  </fieldset>
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false">Need an account?</button>
+
+<form id="sign-in" class="collapse multi-collapse show border m-4 p-4">
+  <div class="form-group">
+    <label for="sign-in-email">Email address</label>
+    <input type="email" class="form-control" name="credentials[email]" id="sign-in-email" aria-describedby="sign-in-email-help" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="sign-in-pw">Password</label>
+    <input type="password" class="form-control" name="credentials[password]" id="sign-in-pw" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Sign In</button>
 </form>
 
-<form id="sign-in" class="border">
-  <fieldset>
-    <legend>Sign in!</legend>
-    <input type="text" name="credentials[email]" placeholder="Email">
-    <input type="password" name="credentials[password]" placeholder="Password">
-    <input type="submit" value="Sign in!">
-  </fieldset>
+<form id="sign-up" class="collapse multi-collapse border m-4 p-4">
+  <div class="form-group">
+    <label for="sign-up-email">Email address</label>
+    <input type="email" class="form-control" name="credentials[email]" id="sign-up-email" aria-describedby="sign-up-email-help" placeholder="Enter email">
+    <small id="sign-up-email-help" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="sign-up-pw">Password</label>
+    <input type="password" class="form-control" name="credentials[password]" id="sign-up-pw" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="sign-up-pw-confirm">Password</label>
+    <input type="password" class="form-control" name="credentials[password_confirmation]" id="sign-up-pw-confirm" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Sign Up</button>
 </form>
